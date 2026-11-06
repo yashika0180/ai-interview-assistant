@@ -35,6 +35,6 @@ Candidate answer: ${answer}`,
     res.status(500).json({ error: error.message });
   }
 });
-app.listen(3001, () => {
+app.listen(process.env.PORT || 3001, "0.0.0.0", () => {
   console.log("InterviewAI server is running at http://localhost:3001");
 });
